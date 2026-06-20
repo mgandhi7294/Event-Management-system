@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-buttons">
+      <button onclick="showLogin()">Login</button>
+      <button onclick="showSignup()">Signup</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <h1>Event Management System</h1>
+  <div id="authSection" class="auth-popup">
+  <div class="auth-box">
+
+    <span class="close-btn" onclick="closeAuth()">✖</span>
+
+    <div id="signupBox">
+      <h2>Signup</h2>
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button onclick="signup()">Signup</button>
+    </div>
+
+    <div id="loginBox" style="display:none;">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+    </div>
+
+  </div>
+</div>
+
+  <form id="eventForm">
+    <input type="text" id="eventName" placeholder="Event Name" required>
+    <input type="date" id="date" required>
+<input type="text" id="time" placeholder="Enter time (e.g. 10:30 AM)" required>
+    <input type="text" id="venue" placeholder="Venue" required>
+    <input type="text" id="category" placeholder="Category">
+    <input type="text" id="description" placeholder="Event Description">
+    <input type="number" id="capacity" placeholder="Capacity" required>
+    <input type="number" id="price" placeholder="Price" required>
+    <input type="text" id="image" placeholder="Image URL">
+    <button type="submit">Add Event</button>
+  </form>
+
+  <div class="top-bar">
+    <input type="text" id="search" placeholder="🔍 Search events..." onkeyup="getEvents()">
+    
+    <select id="filterCategory" onchange="getEvents()">
+      <option value="">All Categories</option>
+    </select>
+  </div>
+
+  <h2>All Events</h2>
+  <div id="eventList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

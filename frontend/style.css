@@ -1,0 +1,207 @@
+body {
+ font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 20px;
+}
+form {
+  width: 35%;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+form input {
+  width: 90%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+form button {
+  padding: 10px 20px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+form button:hover {
+  background: #0d47a1;
+}
+#search, #filterCategory {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+#eventList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.card {
+  width: 260px; 
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;   
+}
+.card-content {
+  padding: 15px;
+  text-align: left;
+}
+.price {
+  color: green;
+  font-weight: bold;
+}
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background: darkred;
+}
+.card button {
+  padding: 6px 10px;
+  margin: 5px 5px 0 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #0288d1;
+  color: white;
+}
+
+.card button:hover {
+  background: #01579b;
+}
+.auth-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+.auth-box {
+  width: 260px;
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Heading */
+.auth-box h2 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+.auth-box input {
+  width: 90%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Buttons */
+.auth-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  opacity: 0.9;
+}
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.nav-buttons button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  color: white;
+}
+
+.nav-buttons button:hover {
+  opacity: 0.8;
+}
+/* 🔥 POPUP BACKGROUND */
+.auth-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 📦 BOX */
+.auth-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+/* ❌ CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
