@@ -7,6 +7,9 @@ body {
 }
 h1 {
   margin-bottom: 20px;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 form {
   width: 35%;
@@ -48,12 +51,16 @@ form button:hover {
   gap: 20px;
 }
 .card {
-  width: 260px; 
+  width: 260px;
+  min-height: 550px;
   background: white;
   border-radius: 15px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
   transition: transform 0.3s;
+
+  display: flex;
+  flex-direction: column;
 }
 .card:hover {
   transform: scale(1.05);
@@ -66,6 +73,10 @@ form button:hover {
 .card-content {
   padding: 15px;
   text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .price {
   color: green;
@@ -204,4 +215,24 @@ form button:hover {
   top: 10px;
   cursor: pointer;
   font-size: 18px;
+}
+.card {
+  width: 260px;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.btn-group {
+  margin-top: auto;
+  display: flex;
+  gap: 5px;
 }

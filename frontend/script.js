@@ -87,15 +87,24 @@ async function getEvents() {
                   : ""
               }
             </p>
-            <p class="price">₹${event.price}</p>
-            <p>Seats Left: <b>${seatsLeft}</b></p>
+<div style="margin-top:auto;">
+  <p class="price">₹${event.price}</p>
+  <p>Seats Left: <b>${seatsLeft}</b></p>
 
-            <button onclick='editEvent(${JSON.stringify(event)})'>Edit</button>
-            <button class="delete-btn" onclick="deleteEvent('${event._id}')">Delete</button>
+  <div class="btn-group">
+    <button onclick='editEvent(${JSON.stringify(event)})'>Edit</button>
 
-            <button ${seatsLeft <= 0 ? "disabled" : ""} onclick="registerEvent('${event._id}')">
-  ${seatsLeft <= 0 ? "Full ❌" : "Register"}
-</button>
+    <button class="delete-btn"
+      onclick="deleteEvent('${event._id}')">
+      Delete
+    </button>
+
+    <button ${seatsLeft <= 0 ? "disabled" : ""}
+      onclick="registerEvent('${event._id}')">
+      ${seatsLeft <= 0 ? "Full ❌" : "Register"}
+    </button>
+  </div>
+</div>
           </div>
         `;
         eventList.appendChild(div);
